@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\ManagedV1\Thing.shared.cs" Link="Thing.shared.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PluginsSDK\PluginsSDK.csproj" />
+  </ItemGroup>
+
+  <Target Name="CopyToOutput" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFiles="$(MSBuildThisFileDirectory)..\..\output\v2\ManagedCore.dll" />
+  </Target>
+
+</Project>

@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PluginsSDK\PluginsSDK.csproj" />
+    <ProjectReference Include="..\ManagedV1\ManagedV1.csproj" />
+    <ProjectReference Include="..\ManagedV2\ManagedV2.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\output\v1\ManagedCore.dll">
+      <Link>PluginV1\ManagedCore.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\output\v1\Native.dll">
+      <Link>PluginV1\Native.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\output\v2\ManagedCore.dll">
+      <Link>PluginV2\ManagedCore.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\output\v2\Native.dll">
+      <Link>PluginV2\Native.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
